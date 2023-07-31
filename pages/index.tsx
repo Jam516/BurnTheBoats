@@ -211,7 +211,7 @@ const Home: NextPage = () => {
     <div className={styles.container}>
       <Head>
         <title>TipJar</title>
-        <meta name="description" content="Tipping app" />
+        <meta name="description" content="Burn the Boats" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
