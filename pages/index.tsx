@@ -165,13 +165,6 @@ function BridgeModal({ isConnected, userBalance }: BridgeModalProps) {
   const { data, isLoading, isSuccess, sendTransaction } =
     useSendTransaction(config);
 
-  // useEffect(() => {
-  //   if (isSuccess) {
-  //     setInputValue("");
-  //     window.alert("Transaction Pending ...");
-  //   }
-  // }, [isSuccess]);
-
   return (
     <div className={styles.hold}>
       <div className={styles.modal}>
