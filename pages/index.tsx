@@ -173,31 +173,33 @@ function BridgeModal({ isConnected, userBalance }: BridgeModalProps) {
   // }, [isSuccess]);
 
   return (
-    <div className={styles.modal}>
-      <h4 className={styles.modalHeader}> Enter amount in ETH </h4>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={handleInputChange}
-      ></input>
-      <button
-        onClick={() => sendTransaction?.()}
-        className={styles.buttonmodal}
-        disabled={
-          !sendTransaction ||
-          isLoading ||
-          inputValue === "" ||
-          isNotNumber ||
-          !isConnected ||
-          Number(inputValue) > Number(userBalance)
-        }
-      >
-        Send to Base
-      </button>
-      {Number(inputValue) > Number(userBalance) && (
-        <div>You dont have enough ETH...</div>
-      )}
-      {isLoading && <div>Check Wallet</div>}
+    <div>
+      <div className={styles.modal}>
+        <h4 className={styles.modalHeader}> Enter amount in ETH </h4>
+        <input
+          type="text"
+          value={inputValue}
+          onChange={handleInputChange}
+        ></input>
+        <button
+          onClick={() => sendTransaction?.()}
+          className={styles.buttonmodal}
+          disabled={
+            !sendTransaction ||
+            isLoading ||
+            inputValue === "" ||
+            isNotNumber ||
+            !isConnected ||
+            Number(inputValue) > Number(userBalance)
+          }
+        >
+          Send to Base
+        </button>
+        {Number(inputValue) > Number(userBalance) && (
+          <div>You dont have enough ETH...</div>
+        )}
+        {isLoading && <div>Check Wallet</div>}
+      </div>
       {isSuccess && <div>Transaction: {JSON.stringify(data)}</div>}
     </div>
   );
