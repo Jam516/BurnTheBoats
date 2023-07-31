@@ -50,7 +50,7 @@ function WarningBlock() {
     <div className={styles.titleDiv}>
       <ul>
         <li>This app is NOT TESTED and exists FOR DEMONSTRATION PURPOSES ONLY!! ⚠️</li>
-        <li>You can only use this app to bridge to Base. YOU CAN'T BRIDGE BACK!!!⚠️⚠️</li>
+        <li>You can only use this app to bridge to Base. YOU CANT BRIDGE BACK!!!⚠️⚠️</li>
         <li>It will take 5 minutes+ for funds to arrive on Base</li>
       </ul>
     </div>
