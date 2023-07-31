@@ -173,7 +173,7 @@ function BridgeModal({ isConnected, userBalance }: BridgeModalProps) {
   // }, [isSuccess]);
 
   return (
-    <div>
+    <div className={styles.hold}>
       <div className={styles.modal}>
         <h4 className={styles.modalHeader}> Enter amount in ETH </h4>
         <input

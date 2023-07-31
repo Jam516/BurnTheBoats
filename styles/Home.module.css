@@ -75,6 +75,14 @@
   gap: 0.625rem;
 }
 
+.hold {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
 .modalHeader {
   font-size: 0.875rem;
   margin-top: 0px;
