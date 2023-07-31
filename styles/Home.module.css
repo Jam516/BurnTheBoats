@@ -71,6 +71,7 @@
   padding: 0.625rem;
   border: 1px solid #000000;
   box-shadow: 2px 2px 0px #001429;
+  max-width: 200px;
   gap: 0.625rem;
 }
 
