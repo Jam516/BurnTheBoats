@@ -6,7 +6,7 @@ A one-way bridge to Base 🔵✨
 - You can only use this app to bridge to Base. YOU CAN'T BRIDGE BACK!!! ⚠️⚠️
 - It will take 5 minutes+ for funds to arrive on Base
 
-Built with Next.js, Conneckit, Wagmi and Viem
+Built with Next.js, ConnectKit, Wagmi and Viem
 
 Open to any suggestions for improvement
 
