@@ -10,6 +10,7 @@ import {
 } from "wagmi";
 import { useState, useEffect } from "react";
 import { parseEther } from "viem";
+import va from '@vercel/analytics';
 
 export const useIsMounted = () => {
   const [mounted, setMounted] = useState(false);
@@ -175,7 +176,10 @@ function BridgeModal({ isConnected, userBalance }: BridgeModalProps) {
           onChange={handleInputChange}
         ></input>
         <button
-          onClick={() => sendTransaction?.()}
+          onClick={() => {
+            sendTransaction?.();
+            va.track('Send', { amount: inputValue });
+          }}
           className={styles.buttonmodal}
           disabled={
             !sendTransaction ||
