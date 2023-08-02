@@ -3,6 +3,7 @@ import type { AppProps } from "next/app";
 import { mainnet } from "wagmi/chains";
 import { WagmiConfig, createConfig } from "wagmi";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
+import { Analytics } from '@vercel/analytics/react';
 
 const alchemyId = process.env.ALCHEMY_API_KEY;
 const walletConnectProjectId = process.env.WALLETCONNECT_PROJECT_ID;
@@ -23,6 +24,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <WagmiConfig config={config}>
       <ConnectKitProvider>
         <Component {...pageProps} />
+        <Analytics />
       </ConnectKitProvider>
     </WagmiConfig>
   );
